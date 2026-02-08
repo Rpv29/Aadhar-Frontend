@@ -3,6 +3,8 @@ import { useState } from "react";
 
 function AadhaarForm(){
 
+    const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+
     const[formdata,setformdata]=useState({
         aadharNumber:"",
         name:"",
@@ -34,7 +36,7 @@ function AadhaarForm(){
                 return;
             }
 
-        axios.post("http://localhost:9090/aadhar",{
+        axios.post(`${API_URL}/aadhar`, {
             ...formdata,
             activeStatus: true
         })
