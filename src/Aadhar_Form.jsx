@@ -46,6 +46,7 @@ function AadhaarForm(){
 
     return <div>
 
+        <h3>Create your Aadhaar here</h3>
         <form action="" onSubmit={submitdata}> 
 
             <input name="aadharNumber" type="text" placeholder="Aadhaar number" onInput={handleChange}/><br /><br />

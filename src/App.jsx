@@ -1,15 +1,20 @@
 import React from 'react'
+import "./app.css"
 import AadhaarForm from "./Aadhar_Form"
 import Getdetails from './Getdetails'
+import Update from './Update'
 
 function App() {
   return (
-    <div>
+    <div id='tittle'>
 
-        <h1>AAdhaar Management System</h1>
+        <h1>Aadhaar Management System</h1>
 
-        <AadhaarForm></AadhaarForm><br /><br />
-       <Getdetails></Getdetails>
+        <div className='body'>
+          <AadhaarForm></AadhaarForm><br /><br />
+          <Getdetails></Getdetails>
+          <Update></Update>
+        </div>
       
     </div>
   )

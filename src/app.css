@@ -1,0 +1,16 @@
+.body{
+    display: flex;
+    gap: 20px;
+    background-color: rgb(149, 216, 252);
+    padding: 30px;
+    color: rgb(0, 0, 0);
+    height: 60vh;
+}
+.body input{
+    height: 20px;
+    width: 300px;
+    padding: 10px;
+}
+h1{
+    text-align: center;
+}
