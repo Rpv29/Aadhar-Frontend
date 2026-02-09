@@ -1,5 +1,6 @@
 import React from 'react'
 import AadhaarForm from "./Aadhar_Form"
+import Getdetails from './Getdetails'
 
 function App() {
   return (
@@ -7,7 +8,8 @@ function App() {
 
         <h1>AAdhaar Management System</h1>
 
-        <AadhaarForm></AadhaarForm>
+        <AadhaarForm></AadhaarForm><br /><br />
+       <Getdetails></Getdetails>
       
     </div>
   )
