@@ -29,6 +29,8 @@ const Getdetails = () => {
 
   return (
     <div>
+
+        <h3>Search your data</h3>
         <input type='text' placeholder='Enter the aadhaar number' value={number} onInput={(e) => setNumber(e.target.value)}></input>
         <br /><br />
         <button onClick={fetcDetails}> Search </button>
@@ -38,7 +40,7 @@ const Getdetails = () => {
         {data && (
             <div>
                 <p>Name: {data.name}</p>
-                <p>DOB: {data.dob}</p>
+                <p>DOB: {data.dateofbirth}</p>
             </div>
         )}
     </div>
