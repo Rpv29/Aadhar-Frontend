@@ -10,31 +10,46 @@ const Update = () => {
   const [data, setData] = useState(null);
   const [msg, setMsg] = useState("");
 
+  const BASE_URL = "https://aadhaar-backend-production.up.railway.app";
+
+  const get = async () => {
+      try {
+      const res = await axios.get(
+        `${BASE_URL}/aadhar/${aadhar}`,
+        { headers: { "Cache-Control": "no-cache" } }
+      );
+      setData(res.data);
+      setName(res.data.name);
+      setMobile(res.data.mobile);
+      setAddress(res.data.address);
+      setDob(res.data.dateofbirth);
+      setMsg("Aadhaar fetched successfully ✅");
+    } catch {
+      setMsg("Aadhaar not found ❌");
+      setData(null);
+    }
+  };
+
+  
   const updateDetails = async (e) => {
     e.preventDefault();
-
     try {
-      // 🔹 PUT (update)
-      await axios.put(
-        `https://aadhaar-backend-production.up.railway.app/aadhar/${num}`,
-        {
-          name,
-          mobile,
-          address,
-          dateofbirth: dob,
-        }
-      );
+      await axios.put(`${BASE_URL}/aadhar/${aadhar}`, {
+        name,
+        mobile,
+        address,
+        dateofbirth: dob,
+      });
 
-      // 🔹 GET (fetch updated data)
       const res = await axios.get(
-        `https://aadhaar-backend-production.up.railway.app/aadhar/${num}`
+        `${BASE_URL}/aadhar/${aadhar}`,
+        { headers: { "Cache-Control": "no-cache" } }
       );
 
       setData(res.data);
-      setMsg("Aadhaar updated");
-    } catch (err) {
+      setMsg("Aadhaar updated successfully ");
+    } catch {
       setMsg("Update failed");
-      setData(null);
     }
   };
 
