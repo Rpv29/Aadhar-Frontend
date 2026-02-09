@@ -12,7 +12,9 @@ const Getdetails = () => {
             setError("please enter Aadhar Number")
             return
         }
-        axios.get("https://aadhaar-backend-production.up.railway.app/   ")
+        axios.get(
+        `https://aadhaar-backend-production.up.railway.app/aadhar/${number.trim()}`
+      )
         .then((res)=>{
             setData(res.data)
             setError("")
