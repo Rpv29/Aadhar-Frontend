@@ -10,9 +10,10 @@ const Update = () => {
     const[dob,setdob]=useState("")
     const[msg,setmsg]=useState("")
 
-    const updateDetails=()=>{
+    const updateDetails=(e)=>{
+        e.preventDefault()
 
-        axios .put(`aadhaar-backend-production.up.railway.app/aadhar/${num}`,
+        axios .put(`https://aadhaar-backend-production.up.railway.app/aadhar/${num}`,
             {
                 name,
                 mobile,
