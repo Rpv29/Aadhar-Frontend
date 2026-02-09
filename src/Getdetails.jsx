@@ -41,6 +41,8 @@ const Getdetails = () => {
             <div>
                 <p>Name: {data.name}</p>
                 <p>DOB: {data.dateofbirth}</p>
+                <p>Mobile: {data.mobile}</p>
+                <p>Address: {data.address}</p>
             </div>
         )}
     </div>
