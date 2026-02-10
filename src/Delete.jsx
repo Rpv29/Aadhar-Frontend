@@ -16,6 +16,7 @@ const Delete = () => {
         try{
             await axios.delete(`${Base_url}/aadhar/${id}`)
             settext("Aadhar deactivated successfully")
+            setid("")
         }catch(err){
             settext("Delete failed")
         }
@@ -23,7 +24,7 @@ const Delete = () => {
   return (
     <div>
         <h3>Delete Aadhar</h3>
-        <h1>🚀 DEPLOY CHECK WORKING</h1>
+        
 
         <input type="text" placeholder='Enter the Aadhar Number' value={id} onInput={(e)=>setid(e.target.value)} />
         <br /><br />
