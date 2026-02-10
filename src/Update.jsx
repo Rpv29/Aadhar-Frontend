@@ -62,14 +62,15 @@ const Update = () => {
 
         {msg && <p>{msg}</p>}
 
-         {data && (
+         {/* {data && (
         // <div>
         //   <p><b>Name:</b> {data.name}</p>
         //   <p><b>Mobile:</b> {data.mobile}</p>
         //   <p><b>Address:</b> {data.address}</p>
         //   <p><b>DOB:</b> {data.dateofbirth}</p>
         // </div>
-      )}
+      )
+      } */}
       
     </div>
   )
