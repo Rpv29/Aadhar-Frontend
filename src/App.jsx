@@ -3,6 +3,7 @@ import "./app.css"
 import AadhaarForm from "./Aadhar_Form"
 import Getdetails from './Getdetails'
 import Update from './Update'
+import Delete from './Delete'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <AadhaarForm></AadhaarForm><br /><br />
           <Getdetails></Getdetails>
           <Update></Update>
+          <Delete></Delete>
         </div>
       
     </div>
