@@ -6,7 +6,7 @@ import Update from './Update'
 import Delete from './Delete'
 
 function App() {
-  <h1 style={{ color: "red" }}>DEPLOY TEST FROM SRC</h1>
+  <h1 style={{ color: "red" }}>VERCEL VITE TEST</h1>
   return (
     <div id='tittle'>
 
